@@ -1,3 +1,10 @@
-pandas 
-openpyxl
-streamlit
+streamlit 
+pandas
+numpy
+collections 
+defaultdict 
+Counter
+os
+pathlib
+time
+tempfile
