@@ -363,46 +363,48 @@ Click “Browse” under Main Contracts File.
 
 Select a CSV file containing contract data.
 
-****Optionally adjust:
+Optionally adjust:
 Chunk Size (default 50000) to manage memory usage.
 
 Filter: Uncheck if you want to include inactive contracts or buyers.
 
-****Click “Load Main File” to process and load the data.
+Click “Load Main File” to process and load the data.
 
-2.**** (Optional) Load New ZIP Codes File
+(Optional) Load New ZIP Codes File
+
 Click “Browse” under New ZIP Codes File (Optional).
 
 Select a CSV file with a list of ZIP codes (and optionally State).
---->Used to check which contracts these ZIPs match.
+Used to check which contracts these ZIPs match.
 
-**** Set Output Directory
+Set Output Directory
 Choose or confirm a directory where the result Excel files will be saved.
 
-**** Run Analyses
----Click “Generate Main Analysis” to:
----Get ZIP code overlaps across contracts.
+Run Analyses
+Click “Generate Main Analysis” to:
 
-****Generates:
-///contract_summary.xlsx
+Get ZIP code overlaps across contracts.
 
-///detailed_contract_zip_matches.xlsx
+Generates:
+contract_summary.xlsx
 
-///Individual files per contract with overlaps.
+detailed_contract_zip_matches.xlsx
 
-****Click “Match New ZIP Codes” to:
+Individual files per contract with overlaps.
 
-///See which existing contracts cover those ZIPs.
+Click “Match New ZIP Codes” to:
 
-///Generate new_zip_matches.xlsx.
+See which existing contracts cover those ZIPs.
 
-*** Review Output
+Generate new_zip_matches.xlsx.
+
+Review Output
 The text box at the bottom shows real-time logs and top overlapping contracts.
 
-****Excel files are saved in the output directory you selected.****
+Excel files are saved in the output directory you selected.****
 
- +Expected Input Format
-*Main Contracts File (CSV):
+Expected Input Format
+Main Contracts File (CSV):
 Must contain these columns (case-insensitive):
 
 .Contract Name
