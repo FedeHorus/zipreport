@@ -385,12 +385,15 @@ Choose or confirm a directory where the result Excel files will be saved.
 
 ****Generates:
 ///contract_summary.xlsx
+
 ///detailed_contract_zip_matches.xlsx
+
 ///Individual files per contract with overlaps.
 
 ****Click “Match New ZIP Codes” to:
 
 ///See which existing contracts cover those ZIPs.
+
 ///Generate new_zip_matches.xlsx.
 
 *** Review Output
