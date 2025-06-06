@@ -1,7 +1,4 @@
 streamlit 
 pandas
 numpy
-os
-pathlib
-time
-tempfile
+openpyxl
