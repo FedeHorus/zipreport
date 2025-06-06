@@ -357,6 +357,7 @@ class ContractZipAnalyzer:
 def main():
     st.set_page_config(page_title="Contract ZIP Code", layout="wide")
     st.title("Contract ZIP Code")
+    st.markdown("""
     ****Load the Main Contracts File
 Click “Browse” under Main Contracts File.
 
@@ -420,7 +421,7 @@ State (optional)
     # Input section
     st.header("1. Main Contracts File")
     main_file = st.file_uploader("Upload Main Contracts CSV File", type=["csv"], key="main_file")
-    st.markdown("""
+   
     
     
     col1, col2 = st.columns(2)
