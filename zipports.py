@@ -357,20 +357,12 @@ class ContractZipAnalyzer:
 def main():
     st.set_page_config(page_title="Contract ZIP Code", layout="wide")
     st.title("Contract ZIP Code")
-    
-    analyzer = ContractZipAnalyzer()
-    
-    # Input section
-    st.header("1. Main Contracts File")
-    main_file = st.file_uploader("Upload Main Contracts CSV File", type=["csv"], key="main_file")
-    st.markdown("""
     ****Load the Main Contracts File
 Click “Browse” under Main Contracts File.
 
 Select a CSV file containing contract data.
 
 ****Optionally adjust:
-
 Chunk Size (default 50000) to manage memory usage.
 
 Filter: Uncheck if you want to include inactive contracts or buyers.
@@ -381,7 +373,6 @@ Filter: Uncheck if you want to include inactive contracts or buyers.
 Click “Browse” under New ZIP Codes File (Optional).
 
 Select a CSV file with a list of ZIP codes (and optionally State).
-
 --->Used to check which contracts these ZIPs match.
 
 **** Set Output Directory
@@ -389,53 +380,48 @@ Choose or confirm a directory where the result Excel files will be saved.
 
 **** Run Analyses
 ---Click “Generate Main Analysis” to:
-
 ---Get ZIP code overlaps across contracts.
 
 ****Generates:
-
 ///contract_summary.xlsx
-
 ///detailed_contract_zip_matches.xlsx
-
 ///Individual files per contract with overlaps.
 
 ****Click “Match New ZIP Codes” to:
 
 ///See which existing contracts cover those ZIPs.
-
 ///Generate new_zip_matches.xlsx.
 
-6. Review Output
+*** Review Output
 The text box at the bottom shows real-time logs and top overlapping contracts.
 
 ****Excel files are saved in the output directory you selected.****
 
- Expected Input Format
-Main Contracts File (CSV):
+ +Expected Input Format
+*Main Contracts File (CSV):
 Must contain these columns (case-insensitive):
 
-Contract Name
+.Contract Name
+.Buyer Name
+.Buyer ID
+.Zip Code
+.State ID (optional)
+.Contract Status (to filter active contracts)
+.Buyer Status (to filter active buyers)
 
-Buyer Name
-
-Buyer ID
-
-Zip Code
-
-State ID (optional)
-
-Contract Status (to filter active contracts)
-
-Buyer Status (to filter active buyers)
-
-New ZIP Codes File (CSV):
+*New ZIP Codes File (CSV):
 Must contain at least:
-
 ****Zip Code (column name containing “zip” is sufficient)
-
 State (optional) 
 """)
+    
+    analyzer = ContractZipAnalyzer()
+    
+    # Input section
+    st.header("1. Main Contracts File")
+    main_file = st.file_uploader("Upload Main Contracts CSV File", type=["csv"], key="main_file")
+    st.markdown("""
+    
     
     col1, col2 = st.columns(2)
     with col1:
